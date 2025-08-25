@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, Bell, Database } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const Footer = ({ showDataSources, setShowDataSources }) => {
   return (

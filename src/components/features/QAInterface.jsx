@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageSquare, Search, FileText, TrendingUp, Clock } from 'lucide-react';
+import LoadingSpinner from '../common/LoadingSpinner';
 
 const QAInterface = ({ 
   qaQuery, 

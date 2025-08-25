@@ -1,10 +1,10 @@
 import React from 'react';
 import { ChevronDown, ExternalLink } from 'lucide-react';
+import Modal from '../ui/Modal';
 
-const DataSourcesModal = ({ showDataSources, setShowDataSources }) => {
-  if (!showDataSources) return null;
-
+const DataSourcesModal = ({ isOpen, onClose }) => {
   return (
+    <Modal isOpen={isOpen} onClose={onClose} title="Available Data Sources">
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-96 overflow-y-auto">
         <div className="p-6">
@@ -42,6 +42,7 @@ const DataSourcesModal = ({ showDataSources, setShowDataSources }) => {
         </div>
       </div>
     </div>
+  </Modal>
   );
 };
 

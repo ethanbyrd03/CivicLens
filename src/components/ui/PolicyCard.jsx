@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar, FileText, Clock, Volume2, Users, ChevronDown, ChevronRight, ExternalLink, Download } from 'lucide-react';
 import StakeholderCard from './StakeholderCard';
 import { getSentimentColor, getVotingStatusColor } from '../../utils/helpers';
 
-const PolicyCard = ({ 
-  policy, 
-  expandedPolicy, 
-  setExpandedPolicy, 
-  setSearchQuery 
-}) => {
+const PolicyCard = ({ policy, setSearchQuery }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
       <div className="p-6">
